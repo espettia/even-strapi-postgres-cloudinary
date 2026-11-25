@@ -2,7 +2,7 @@ services:
   - type: web
     name: strapi
     env: node
-    plan: starter
+    plan: free
     buildCommand: yarn install && yarn build
     startCommand: yarn start
     healthCheckPath: /_health
@@ -28,8 +28,3 @@ services:
         generateValue: true
       - key: APP_KEYS
         generateValue: true
-
-databases:
-  - name: strapi
-    plan: basic-256mb
-    diskSizeGB: 1
